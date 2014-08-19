@@ -12,11 +12,11 @@ import com.RLD.filewriter.WriteFile;
 public class MainController {
 	
     @RequestMapping(method = RequestMethod.GET) 
-    public String printWelcome(String data) {
+    public void printWelcome(String data) {
     	
     	WriteFile.writeFile(data);
 
-        return "hello";
+       // return "hello";
     }
 
 }
