@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+apply plugin: 'war'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile		'org.springframework:spring-core:' + springVersion, 
+				'org.springframework:spring-web:' + springVersion,
+				'org.springframework:spring-webmvc:'  + springVersion,
+				'org.springframework:spring-context:'  + springVersion
+	
+
+testCompile		'junit:junit:4.11',
+				'org.testng:testng:6.8.7'
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '1.11'
+ }
