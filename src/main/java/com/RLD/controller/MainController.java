@@ -6,17 +6,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.RLD.filewriter.WriteFile;
+import java.io.IOException;
 
 
 @Controller
 public class MainController {
+    
+    String data = "Report Layout designer Tool";
 	
     @RequestMapping(method = RequestMethod.GET) 
-    public void printWelcome(String data) {
+    public String printWelcome(String data) throws IOException {
     	
     	WriteFile.writeFile(data);
 
-       // return "hello";
+        return "index";
     }
 
 }
