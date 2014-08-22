@@ -247,4 +247,12 @@ tr{
 
 	height: 100%;
 }
+#save{
+
+	position: fixed;
+
+	left: 1100px;
+
+	top: 14px;
+}
 
